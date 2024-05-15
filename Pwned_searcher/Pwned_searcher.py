@@ -1,3 +1,7 @@
+#<---  Pwned searcher | Database searcher by Adapters  --->
+#<---                  python 3.x                      --->
+#<---      Only for educationnal / good purposes       --->
+
 import os
 import time
 import subprocess
