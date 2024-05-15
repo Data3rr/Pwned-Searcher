@@ -1,3 +1,7 @@
+#<---  Pwned parser | Database parser by Adapters  --->
+#<---               python 3.x                     --->
+#<---   Only for educationnal / good purposes      --->
+
 import json
 import os
 from colorama import Fore, init
