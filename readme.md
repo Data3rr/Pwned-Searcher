@@ -23,6 +23,7 @@ Pwned searcher is a local website that allows you to search databases quickly an
 - Check that you've defined the JAVA_HOME environment variable correctly, if not find the solution [here](https://stackoverflow.com/questions/11161248/setting-java-home)
 
 ### 2. Second step - Startup
+- Install Pwned by running the command `python Pwned_installer.py` and select your installation directory
 - Now you can directly execute the command `python Pwned_searcher.py` to get started
 - Once the program has run without errors, you need to define the allocated ram by going to menu 2 by pressing 2, then enter the amount of ram in **GO**. *(it will be saved)*
 - Now use the Start menu by pressing 1 to start running Solr and the local web server.
