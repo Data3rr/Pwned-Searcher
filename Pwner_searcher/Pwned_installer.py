@@ -8,9 +8,11 @@ import shutil
 import urllib.request
 from colorama import Fore, init
 
+
 # Run as admin
 def run_as_admin(func):
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
+
 
 # Install java
 def java_installer(output_path):
@@ -20,12 +22,19 @@ def java_installer(output_path):
     except Exception as e:
         return e
 
+
 # JAVA_HOME env
 def java_home(pwned_path):
     try:
         # Create dir
         if not os.path.exists(pwned_path + '\\app'):
             os.makedirs(pwned_path + '\\app')
+        else: pass
+
+        # Fix pwned_path
+        if not ':' in pwned_path:
+            pwned_path = os.path.join(os.getcwd() + '\\' + pwned_path)
+        else: pass
 
         # Detect Java
         java_path = []
@@ -44,6 +53,7 @@ def java_home(pwned_path):
         return True
     except Exception as e:
         return e
+
 
 # Install Solr
 def install_solr(pwned_path):
@@ -72,6 +82,7 @@ def install_solr(pwned_path):
     
     except Exception as e: 
         return e
+
 
 def reorganization(pwned_path, w, y, g, r):
     try:
@@ -118,6 +129,10 @@ def menu():
 ╚═╝      ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚═════╝""" + y + """ by Adapters""" + w).replace('█', w + '█' + y))
     pwned_path = input(f"""\n{y}[{w}+{y}]{w} Enter your installation path here: """)              
     
+    # Create dir if not exists
+    if not os.path.exists(pwned_path):
+        os.makedirs(pwned_path)
+
     # Install Java 
     print(f'-----\n{y}[{w}+{y}]{w} Java installation...')
     java = java_installer(pwned_path + '\\app')
